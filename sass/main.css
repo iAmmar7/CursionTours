@@ -26,8 +26,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  top: 110%;
-  right: 0%;
+  top: 170%;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s;
@@ -52,7 +51,8 @@ body {
   font-size: 1.1vw;
   top: 0%;
   padding: 0 2em;
-  border: 1px solid red;
+  -webkit-box-shadow: 0px 0px 10px #27899f;
+          box-shadow: 0px 0px 10px #27899f;
 }
 
 @media screen and (max-width: 884px) {
@@ -72,6 +72,7 @@ body {
 }
 
 .navbar a {
+  color: #e5e5e5;
   text-decoration: none;
 }
 
@@ -89,21 +90,25 @@ body {
           margin-inline-start: 0px;
   -webkit-margin-end: 0px;
           margin-inline-end: 0px;
-  -webkit-padding-start: 20px;
-          padding-inline-start: 20px;
-  -webkit-padding-end: 20px;
-          padding-inline-end: 20px;
+  -webkit-padding-start: 30px;
+          padding-inline-start: 30px;
+  -webkit-padding-end: 30px;
+          padding-inline-end: 30px;
   font-size: 1.2rem;
-  border: 1px solid green;
 }
 
 .navbar .navbar-items li a {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+  padding-bottom: 6px;
 }
 
 .navbar .navbar-items li a:hover {
-  color: grey;
+  color: #e5e5e5dc;
+}
+
+.navbar .navbar-items li a:focus {
+  border-bottom: 4px solid orangered;
 }
 
 .navbar .navbar-items .service-container {
@@ -118,5 +123,28 @@ body {
 
 .navbar .navbar-items .service-container .service-select {
   width: 130px;
+}
+
+.navbar .navbar-items .service-container .service-select ul {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.navbar .navbar-items .service-container .service-select ul li {
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
+  -webkit-padding-end: 10px;
+          padding-inline-end: 10px;
+  text-align: center;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+/*    BANNER 
+========================== */
+.banner .banner-background img {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */

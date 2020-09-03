@@ -2,7 +2,7 @@
   background-color: $profile-select-background;
   display: flex;
   flex-direction: column;
-  @include position(110%, null, 0%);
+  @include position(170%, null, null);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s;

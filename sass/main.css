@@ -49,17 +49,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 1.1vw;
-  top: 0%;
+  z-index: 1000;
   padding: 0 2em;
   -webkit-box-shadow: 0px 0px 10px #27899f;
           box-shadow: 0px 0px 10px #27899f;
-}
-
-@media screen and (max-width: 884px) {
-  .navbar {
-    width: 100%;
-    height: 45px;
-  }
 }
 
 .navbar .logo {
@@ -90,10 +83,10 @@ body {
           margin-inline-start: 0px;
   -webkit-margin-end: 0px;
           margin-inline-end: 0px;
-  -webkit-padding-start: 30px;
-          padding-inline-start: 30px;
-  -webkit-padding-end: 30px;
-          padding-inline-end: 30px;
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
+  -webkit-padding-end: 20px;
+          padding-inline-end: 20px;
   font-size: 1.2rem;
 }
 
@@ -111,6 +104,10 @@ body {
   border-bottom: 4px solid orangered;
 }
 
+.navbar .navbar-items li i {
+  color: #e5e5e5;
+}
+
 .navbar .navbar-items .service-container {
   position: relative;
   cursor: pointer;
@@ -123,11 +120,12 @@ body {
 
 .navbar .navbar-items .service-container .service-select {
   width: 130px;
+  border-top: 4px solid orangered;
 }
 
 .navbar .navbar-items .service-container .service-select ul {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .navbar .navbar-items .service-container .service-select ul li {
@@ -141,10 +139,107 @@ body {
   font-size: 1.1rem;
 }
 
+.navbar .navbar-items .social-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-left: 2px solid #e5e5e5;
+  padding-left: 10px;
+}
+
+.navbar .navbar-items .social-items li {
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
+  -webkit-padding-end: 10px;
+          padding-inline-end: 10px;
+}
+
+.navbar .navbar-items .item-hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 884px) {
+  .navbar .navbar-items li {
+    display: none;
+  }
+  .navbar .navbar-items .item-hamburger {
+    display: initial;
+  }
+}
+
+.navbar .mobile-nav {
+  display: none;
+}
+
 /*    BANNER 
 ========================== */
+.banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner .banner-background {
+  position: absolute;
+  z-index: -1;
+}
+
 .banner .banner-background img {
   width: 100%;
-  height: auto;
+  height: 100vh;
+}
+
+.banner .banner-tag {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.banner .banner-tag h1 {
+  width: 100%;
+  color: #e5e5e5;
+  font-size: 7vw;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .banner .banner-tag h1 {
+    font-size: 9vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner .banner-tag h1 {
+    font-size: 11vw;
+  }
+}
+
+.banner .banner-tag h1 span {
+  padding: 0px;
+  margin: 0px;
+}
+
+.banner .banner-tag h1 span:last-child {
+  padding-left: 0.7em;
+  margin-top: -2vw;
 }
 /*# sourceMappingURL=main.css.map */

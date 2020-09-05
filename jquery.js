@@ -6,10 +6,18 @@ $(document).ready(function () {
     $(document).scroll(function () {
       scroll_start = $(this).scrollTop();
       if (scroll_start > offset.top) {
-        $('.navbar').css('background', '#27899f');
+        $('header').css('background', '#27899f');
       } else {
-        $('.navbar').css('background', 'transparent');
+        $('header').css('background', 'transparent');
       }
     });
   }
+
+  $('.item-hamburger').click(function () {
+    $('.mobile-container').slideToggle();
+  });
+
+  $('.mobile-service-tag').click(function () {
+    $('.mobile-service-select').slideToggle();
+  });
 });
